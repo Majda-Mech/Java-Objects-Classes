@@ -17,24 +17,25 @@ public class Ingredient {
         return amount;
     }
 
-    public void getAmount(int amount) {
-        this.amount = amount;
-    }
-
     public String getUnit() {
         return unit;
-    }
-
-    public void setUnit(String eenheid) {
-        this.unit = eenheid;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String naam) {
-        this.name = naam;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
 } //closing class Ingredient
