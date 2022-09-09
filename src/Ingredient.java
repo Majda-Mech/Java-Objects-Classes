@@ -1,39 +1,40 @@
 public class Ingredient {
     // private so we need getters and setters
-    private double hoeveelheid;
-    private String eenheid;
-    private String naam;
+    private int amount;
+    private String unit;
+    private String name;
 
 
-    public Ingredient(double hoeveelheid, String eenheid, String naam) {
-        this.hoeveelheid = hoeveelheid;
-        this.eenheid = eenheid;
-        this.naam = naam;
+    public Ingredient(int amount, String unit, String name) {
+        this.amount = amount;
+        this.unit = unit;
+        this.name = name;
     } // closing method Ingredient
 
+
     // getters and setters
-    public double getHoeveelheid() {
-        return hoeveelheid;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setHoeveelheid(double hoeveelheid) {
-        this.hoeveelheid = hoeveelheid;
+    public void getAmount(int amount) {
+        this.amount = amount;
     }
 
-    public String getEenheid() {
-        return eenheid;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setEenheid(String eenheid) {
-        this.eenheid = eenheid;
+    public void setUnit(String eenheid) {
+        this.unit = eenheid;
     }
 
-    public String getNaam() {
-        return naam;
+    public String getName() {
+        return name;
     }
 
-    public void setNaam(String naam) {
-        this.naam = naam;
+    public void setName(String naam) {
+        this.name = naam;
     }
 
 } //closing class Ingredient

@@ -1,13 +1,17 @@
 public class Main {
     public static void main(String[] args) {
+        ApplePieRecipe applepierecipe = new ApplePieRecipe();
         //print ingredienten
-        ApplePieRecipe applePie = new ApplePieRecipe();
-        applePie.printIngredients();
+        applepierecipe.printIngredients();
 
         //print recipe
-        ApplePieRecipe printingAll = new ApplePieRecipe();
-        printingAll.printAllSteps();
+        applepierecipe.printAllSteps();
+
+        Shakshuka shakshuka = new Shakshuka();
+        shakshuka.printIngredients();
+        shakshuka.printAllSteps();
+
 
 
     } // closing method main
-} // closing class maingit ad .
+} // closing class main
