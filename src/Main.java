@@ -1,8 +1,9 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         System.out.println("Wat wil je maken?");
         System.out.println("Typ 1 voor een heerlijke appeltaart");
         System.out.println("Typ 2 voor een amazing shakshuka");
@@ -12,8 +13,10 @@ public class Main {
         if (choice == 1) {
             ApplePieRecipe applepierecipe = new ApplePieRecipe();
             //print ingredienten
-            applepierecipe.printIngredients();
-            //print recipe
+//            applepierecipe.printIngredients();
+            applepierecipe.printingTaart();
+
+                        //print recipe
             applepierecipe.printAllSteps();
         } else if (choice == 2) {
             Shakshuka shakshuka = new Shakshuka();

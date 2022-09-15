@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class ApplePieRecipe {
     // geen variabelen
     // wel een heleboel methodes, zie onder de constructor
 
-    // geen constructor!! las ik een constructor maak, dan herkent ie roomboter.getHoeveelheid niet meer in volgende methode
+    // geen constructor!! als ik een constructor maak, dan herkent ie roomboter.getHoeveelheid niet meer in volgende methode
     // objecten instantieren voor ingredienten
     Ingredient roomboter = new Ingredient(200, "gram", "ongezouten roomboter");
     Ingredient basterSuiker = new Ingredient(200, "gram", "witte basterd suiker");
@@ -16,21 +20,46 @@ public class ApplePieRecipe {
     Ingredient paneermeel = new Ingredient(15, "gram", "paneermeel");
 
 
-    // printen ingredienten
+    //extra door gebruik te maken van een arraylist en een eenvoudiger print method
+    List<Ingredient> taart = new ArrayList<>();
 
+
+//extra door gebruik te maken van een arraylist en een eenvoudiger print method
+    public ApplePieRecipe() {
+        taart.add(roomboter);
+        taart.add(basterSuiker);
+        taart.add(bakmeel);
+        taart.add(ei);
+        taart.add(vanillesuiker);
+        taart.add(zout);
+        taart.add(appels);
+        taart.add(kristalSuiker);
+        taart.add(kaneel);
+        taart.add(paneermeel);
+    }
+
+    //extra door gebruik te maken van een arraylist en een eenvoudiger print method
+    public void printingTaart() {
+        for (int i = 0; i < taart.size(); i++) {
+            System.out.println(taart.get(i).getAmount() + " " + taart.get(i).getUnit()  + " " + taart.get(i).getName());
+        }
+    }
+
+    // printen ingredienten
     public void printIngredients() { // roomboter blijft onbereikbaar tenzij ik de printlns hierondere in de method appelPieRecipe zet, maar dan wordt de methode weer onbereikbaar en wil intelliJ een nwe public static void method toevoegen?
-        System.out.println("\nRECEPT VOOR DE HEERLIJKSTE APPELTAART");
-        System.out.println("Ingredienten:");
-        System.out.println(roomboter.getAmount() + " " + roomboter.getUnit() + " " + roomboter.getName());
-        System.out.println(basterSuiker.getAmount() + " " + basterSuiker.getUnit() + " " + basterSuiker.getName());
-        System.out.println(bakmeel.getAmount() + " " + bakmeel.getUnit() + " " + bakmeel.getName());
-        System.out.println(ei.getAmount() + " " + ei.getUnit() + " " + ei.getName());
-        System.out.println(vanillesuiker.getAmount() + " " + vanillesuiker.getUnit() + " " + vanillesuiker.getName());
-        System.out.println(zout.getAmount() + " " + zout.getUnit() + " " + zout.getName());
-        System.out.println(appels.getAmount() + " " + appels.getUnit() + " " + appels.getName());
-        System.out.println(kristalSuiker.getAmount() + " " + kristalSuiker.getUnit() + " " + kristalSuiker.getName());
-        System.out.println(kaneel.getAmount() + " " + kaneel.getUnit() + " " + kaneel.getName());
-        System.out.println(paneermeel.getAmount() + " " + paneermeel.getUnit() + " " + paneermeel.getName());
+//        System.out.println("\nRECEPT VOOR DE HEERLIJKSTE APPELTAART");
+//        System.out.println("Ingredienten:");
+//        System.out.println(roomboter.getAmount() + " " + roomboter.getUnit() + " " + roomboter.getName());
+//        System.out.println(basterSuiker.getAmount() + " " + basterSuiker.getUnit() + " " + basterSuiker.getName());
+//        System.out.println(bakmeel.getAmount() + " " + bakmeel.getUnit() + " " + bakmeel.getName());
+//        System.out.println(ei.getAmount() + " " + ei.getUnit() + " " + ei.getName());
+//        System.out.println(vanillesuiker.getAmount() + " " + vanillesuiker.getUnit() + " " + vanillesuiker.getName());
+//        System.out.println(zout.getAmount() + " " + zout.getUnit() + " " + zout.getName());
+//        System.out.println(appels.getAmount() + " " + appels.getUnit() + " " + appels.getName());
+//        System.out.println(kristalSuiker.getAmount() + " " + kristalSuiker.getUnit() + " " + kristalSuiker.getName());
+//        System.out.println(kaneel.getAmount() + " " + kaneel.getUnit() + " " + kaneel.getName());
+//        System.out.println(paneermeel.getAmount() + " " + paneermeel.getUnit() + " " + paneermeel.getName());
+
     }
 
 
@@ -93,6 +122,11 @@ public class ApplePieRecipe {
     public static void baking() {
         System.out.println("10. Zet de taart iets onder het midden van de oven. Bak de taart in 60 minuten op 170 graden Celsius (boven en onderwarmte) gaar en goudbruin.");
     }
+
+
+
+
+
 
 
 } // closing class ApplePieRecipe
