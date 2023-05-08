@@ -1,4 +1,4 @@
-# Backend Java objecten & klassenapple
+# Backend Java objecten & klassen
 
 
 Les 2 van Novi Hogeschool Full stack bootcamp
